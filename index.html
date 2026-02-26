@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>ABHI GRAPHICS | Cinematic Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABHI GRAPHICS | Cinematic Portfolio</title>
 
-   <style>
-
-    /* ===== FONT IMPORT ===== */
+<!-- FONT -->
+<style>
     @font-face {
         font-family: 'Roxborough';
         src: url('fonts/RoxboroughCF-Regular.ttf') format('truetype');
@@ -16,162 +16,117 @@
         margin:0;
         padding:0;
         box-sizing:border-box;
+        font-family: 'Roxborough', Arial, sans-serif;
     }
 
-    html{
-        scroll-behavior:smooth;
-    }
-           <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            background-color: black; /* Pure black background */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white; /* Text color white */
-            font-family: Arial, sans-serif;
-        }
-
-        h1 {
-            font-size: 3rem;
-        }
-</style>
+    html {
+        scroll-behavior: smooth;
     }
 
-        @keyframes gradientMove{
-            0%{background-position:0% 50%;}
-            50%{background-position:100% 50%;}
-            100%{background-position:0% 50%;}
-        }
+    body{
+        min-height:100vh;
+        /* Background Image + fallback black */
+        background: black url('images/heybg.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color:white;
+    }
 
+    nav{
+        display:flex;
+        justify-content:space-between;
+        padding:20px 8%;
+        background: rgba(0,0,0,0.6);
+        backdrop-filter: blur(10px);
+        position: sticky;
+        top:0;
+        z-index: 10;
+    }
+
+    nav h2{
+        color:#00ffc3;
+        letter-spacing:2px;
+    }
+
+    nav a{
+        color:white;
+        text-decoration:none;
+        margin-left:20px;
+        font-size:15px;
+    }
+
+    header{
+        height:90vh;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        padding:20px;
+    }
+
+    header h1{
+        font-size:48px;
+        background: linear-gradient(90deg,#00ffc3,#00aaff);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    header p{
+        margin:20px 0;
+        color:#ccc;
+    }
+
+    .btn{
+        padding:12px 28px;
+        background:#00ffc3;
+        color:black;
+        text-decoration:none;
+        border-radius:30px;
+        font-weight:bold;
+    }
+
+    .section{
+        padding:80px 10%;
+        text-align:center;
+    }
+
+    .portfolio{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+        gap:25px;
+    }
+
+    .card{
+        background:rgba(255,255,255,0.05);
+        padding:20px;
+        border-radius:20px;
+    }
+
+    .card img{
+        width:100%;
+        border-radius:15px;
+    }
+
+    footer{
+        text-align:center;
+        padding:30px;
+        background:black;
+        color:gray;
+    }
+
+    @media(max-width:768px){
         nav{
-            display:flex;
-            justify-content:space-between;
-            padding:20px 8%;
-            background:rgba(0,0,0,0.6);
-            backdrop-filter:blur(10px);
-            position:sticky;
-            top:0;
-        }
-
-        nav h2{
-            color:#00ffc3;
-            letter-spacing:2px;
-        }
-
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin-left:20px;
-            font-size:15px;
-        }
-
-        header{
-            height:90vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
             flex-direction:column;
             text-align:center;
-            padding:20px;
         }
-
         header h1{
-            font-size:48px;
-            background:linear-gradient(90deg,#00ffc3,#00aaff);
-            -webkit-background-clip:text;
-            color:transparent;
-        }
-
-        header p{
-            margin:20px 0;
-            color:#ccc;
-        }
-
-        .btn{
-            padding:12px 28px;
-            background:#00ffc3;
-            color:black;
-            text-decoration:none;
-            border-radius:30px;
-            font-weight:bold;
-            animation:pulse 2s infinite;
-        }
-
-        @keyframes pulse{
-            0%{box-shadow:0 0 0 0 rgba(0,255,195,0.7);}
-            70%{box-shadow:0 0 0 15px rgba(0,255,195,0);}
-            100%{box-shadow:0 0 0 0 rgba(0,255,195,0);}
-        }
-
-        .section{
-            padding:80px 10%;
-            text-align:center;
-            opacity:0;
-            transform:translateY(60px);
-            transition:all 1s ease;
-        }
-
-        .section h2{
-            margin-bottom:40px;
             font-size:32px;
         }
-
-        .portfolio{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-            gap:25px;
-        }
-
-        .card, .price-box{
-            background:rgba(255,255,255,0.05);
-            backdrop-filter:blur(15px);
-            border:1px solid rgba(255,255,255,0.1);
-            padding:20px;
-            border-radius:20px;
-            transition:0.4s;
-        }
-
-        .card:hover, .price-box:hover{
-            transform:translateY(-10px);
-            box-shadow:0 0 25px rgba(0,255,195,0.4);
-        }
-
-        .card img{
-            width:100%;
-            border-radius:15px;
-        }
-
-        .pricing{
-            display:flex;
-            flex-wrap:wrap;
-            justify-content:center;
-            gap:30px;
-        }
-
-        footer{
-            text-align:center;
-            padding:30px;
-            background:black;
-            color:gray;
-        }
-
-        @media(max-width:768px){
-            nav{
-                flex-direction:column;
-                text-align:center;
-            }
-            header h1{
-                font-size:32px;
-            }
-        }
-
-    </style>
+    }
+</style>
 </head>
-<body>
 
+<body>
 <nav>
     <h2>ABHI GRAPHICS</h2>
     <div>
@@ -190,66 +145,44 @@
 <section class="section" id="portfolio">
     <h2>My Work</h2>
     <div class="portfolio">
-
         <div class="card">
-            <img src="test.jpg/resturent.jpg">
+            <img src="test.jpg/resturent.jpg" alt="Restaurant Branding">
             <h3>Restaurant Branding</h3>
         </div>
-
         <div class="card">
-            <img src="test.jpg/sumit mobile.jpg">
+            <img src="test.jpg/sumit mobile.jpg" alt="Mobile Shop Logo">
             <h3>Mobile Shop Logo</h3>
         </div>
-
         <div class="card">
-            <img src="test.jpg/ziddi.jpg">
+            <img src="test.jpg/ziddi.jpg" alt="Automobile Workshop">
             <h3>Automobile Workshop</h3>
         </div>
-
         <div class="card">
-            <img src="test.jpg/as2.jpg">
+            <img src="test.jpg/as2.jpg" alt="">
         </div>
-
-   <div class="card">
-            <img src="test.jpg/raja.jpg">
-   </div>
-
         <div class="card">
-<img src="test.jpg/as1.jpg">
-
-  </div>
-
+            <img src="test.jpg/raja.jpg" alt="">
+        </div>
         <div class="card">
-<img src="test.jpg/neofit.jpg"> 
-  </div>
-
-        <div class="card">
-<img src="test.jpg/1.jpg">
-
-  </div>
-
-        <div class="card">
-<img src="test.jpg/ujwal.jpg">
-  </div>
-
-        <div class="card">
-<img src="test.jpg/sj.jpg">
+            <img src="test.jpg/as1.jpg" alt="">
+        </div>
+    </div>
 </section>
 
 <section class="section" id="pricing">
     <h2>Pricing Plans</h2>
-    <div class="pricing">
-        <div class="price-box">
+    <div class="portfolio">
+        <div class="card">
             <h3>Basic Logo</h3>
-            <p>?499</p>
+            <p>₹499</p>
         </div>
-        <div class="price-box">
+        <div class="card">
             <h3>Premium Logo</h3>
-            <p>?1499</p>
+            <p>₹1499</p>
         </div>
-        <div class="price-box">
+        <div class="card">
             <h3>Full Branding</h3>
-            <p>?4999</p>
+            <p>₹4999</p>
         </div>
     </div>
 </section>
@@ -261,32 +194,10 @@
         Chat on WhatsApp
     </a>
 </section>
-<br><br>
-
-<a class="insta-btn" href="https://instagram.com/official_m_r._abhi" target="_blank">
-    <i class="fa-brands fa-instagram"></i> Follow on Instagram
-</a>
 
 <footer>
     © 2026 ABHI GRAPHICS | Designed with Passion
 </footer>
 
-<script>
-    const observer = new IntersectionObserver(entries=>{
-        entries.forEach(entry=>{
-            if(entry.isIntersecting){
-                entry.target.style.opacity=1;
-                entry.target.style.transform="translateY(0)";
-            }
-        });
-    });
-
-    document.querySelectorAll('.section').forEach(section=>{
-        observer.observe(section);
-    });
-</script>
-
 </body>
-
 </html>
-
