@@ -5,23 +5,110 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ABHI GRAPHICS | Cinematic Portfolio</title>
 
-<!-- FONT -->
-    }
 <style>
-    .social-buttons{
-    display:flex;
-    gap:15px;
-    justify-content:center;
-    margin-top:20px;
+
+/* FONT */
+@font-face {
+    font-family: 'Roxborough';
+    src: url('fonts/RoxboroughCF-Regular.ttf') format('truetype');
 }
 
-.whatsapp-btn{
-    background:#25D366;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Roxborough',serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background-color:black;
+}
+
+/* 🔥 HERO BACKGROUND */
+header{
+    height:100vh;
+    background-bg.png:url('bg.png/hey.png');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 8%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top:0;
+    z-index:10;
+}
+
+nav h2{
+    color:#00ffc3;
+    letter-spacing:2px;
+}
+
+nav a{
     color:white;
-    padding:12px 20px;
-    border:none;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:15px;
+}
+
+header h1{
+    font-size:48px;
+    background: linear-gradient(90deg,#00ffc3,#00aaff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+header p{
+    margin:20px 0;
+    color:#fff;
+}
+
+.btn{
+    padding:12px 28px;
+    background:#00ffc3;
+    color:black;
+    text-decoration:none;
     border-radius:30px;
-    cursor:pointer;
+    font-weight:bold;
+}
+
+.section{
+    padding:80px 10%;
+    text-align:center;
+    background:black;
+    color:white;
+}
+
+.portfolio{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:20px;
+}
+
+.card img{
+    width:100%;
+    border-radius:15px;
 }
 
 .insta-btn{
@@ -32,129 +119,29 @@
     border-radius:30px;
     cursor:pointer;
 }
-<style>
-    @font-face {
-        font-family: 'Roxborough';
-        src: url('fonts/RoxboroughCF-Regular.ttf') format('truetype');
-    }
 
-    *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-        font-family: 'Roxborough',serif;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body{
-        <section class="hero"></section>
-        .hero{
-    height:100vh;
-    background-bg.png:url('bg.png/hey.png');
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+footer{
+    text-align:center;
+    padding:30px;
+    background:black;
+    color:gray;
 }
 
+@media(max-width:768px){
     nav{
-        display:flex;
-        justify-content:space-between;
-        padding:20px 8%;
-        background: rgba(0,0,0,0.6);
-        backdrop-filter: blur(10px);
-        position: sticky;
-        top:0;
-        z-index: 10;
-    }
-
-    nav h2{
-        color:#00ffc3;
-        letter-spacing:2px;
-    }
-
-    nav a{
-        color:white;
-        text-decoration:none;
-        margin-left:20px;
-        font-size:15px;
-    }
-
-    header{
-        height:90vh;
-        display:flex;
         flex-direction:column;
-        justify-content:center;
-        align-items:center;
         text-align:center;
-        padding:20px;
     }
-
     header h1{
-        font-size:48px;
-        background: linear-gradient(90deg,#00ffc3,#00aaff);
-        -webkit-background-clip: text;
-        color: transparent;
+        font-size:32px;
     }
+}
 
-    header p{
-        margin:20px 0;
-        color:#ccc;
-    }
-
-    .btn{
-        padding:12px 28px;
-        background:#00ffc3;
-        color:black;
-        text-decoration:none;
-        border-radius:30px;
-        font-weight:bold;
-    }
-
-    .section{
-        padding:80px 10%;
-        text-align:center;
-    }
-
-    .portfolio{
-        display:grid;
-        grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-        gap:25px;
-    }
-
-    .card{
-        background:rgba(255,255,255,0.05);
-        padding:20px;
-        border-radius:20px;
-    }
-
-    .card img{
-        width:100%;
-        border-radius:15px;
-    }
-
-    footer{
-        text-align:center;
-        padding:30px;
-        background:black;
-        color:gray;
-    }
-
-    @media(max-width:768px){
-        nav{
-            flex-direction:column;
-            text-align:center;
-        }
-        header h1{
-            font-size:32px;
-        }
-    }
 </style>
 </head>
 
 <body>
+
 <nav>
     <h2>ABHI GRAPHICS</h2>
     <div>
@@ -173,27 +160,19 @@
 <section class="section" id="portfolio">
     <h2>My Work</h2>
     <div class="portfolio">
+
         <div class="card">
-            <img src="test.jpg/resturent.jpg" alt="Restaurant Branding">
-            <h3>Restaurant Branding</h3>
+            <img src="test.jpg/resturent.jpg" alt="">
         </div>
+
         <div class="card">
-            <img src="test.jpg/sumit mobile.jpg" alt="Mobile Shop Logo">
-            <h3>Mobile Shop Logo</h3>
+            <img src="test.jpg/sumit mobile.jpg" alt="">
         </div>
+
         <div class="card">
-            <img src="test.jpg/ziddi.jpg" alt="Automobile Workshop">
-            <h3>Automobile Workshop</h3>
+            <img src="test.jpg/ziddi.jpg" alt="">
         </div>
-        <div class="card">
-            <img src="test.jpg/as2.jpg" alt="">
-        </div>
-        <div class="card">
-            <img src="test.jpg/raja.jpg" alt="">
-        </div>
-        <div class="card">
-            <img src="test.jpg/as1.jpg" alt="">
-        </div>
+
     </div>
 </section>
 
@@ -218,16 +197,16 @@
 <section class="section" id="contact">
     <h2>Let's Work Together</h2>
     <p style="margin-bottom:20px;">Ready to build your brand?</p>
+
     <a class="btn" href="https://wa.me/919171808503" target="_blank">
         Chat on WhatsApp
     </a>
-    <body>
 
+    <br><br>
 
-<h1>Instagram</h1> 
-<a href="https://instagram.com/official_m_r._abhi" target="_blank">
-    <button class="insta-btn">Follow on Instagram</button>
-</a>
+    <a href="https://instagram.com/official_m_r._abhi" target="_blank">
+        <button class="insta-btn">Follow on Instagram</button>
+    </a>
 </section>
 
 <footer>
@@ -236,12 +215,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
