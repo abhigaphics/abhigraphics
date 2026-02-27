@@ -6,6 +6,30 @@
 <title>ABHI GRAPHICS | Cinematic Portfolio</title>
 
 <!-- FONT -->
+    .social-buttons{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    margin-top:20px;
+}
+
+.whatsapp-btn{
+    background:#25D366;
+    color:white;
+    padding:12px 20px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.insta-btn{
+    background:#E1306C;
+    color:white;
+    padding:12px 20px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+}
 <style>
     @font-face {
         font-family: 'Roxborough';
@@ -16,7 +40,7 @@
         margin:0;
         padding:0;
         box-sizing:border-box;
-        font-family: 'Roxborough', Arial, sans-serif;
+        font-family: 'Roxborough',serif;
     }
 
     html {
@@ -26,8 +50,10 @@
     body{
         min-height:100vh;
         /* Background Image + fallback black */
-        background: black url('images/heybg.jpg') no-repeat center center fixed;
+        background: black url('bg.jpg/heybg.jpg');
+        background-positon:center;
         background-size: cover;
+        background-repeat:no-repeat;
         color:white;
     }
 
@@ -193,6 +219,12 @@
     <a class="btn" href="https://wa.me/919171808503" target="_blank">
         Chat on WhatsApp
     </a>
+    <body>
+
+<h1>Welcome to My Instagram</h1> 
+<a href="https://instagram.com/official_m_r._abhi" target="_blank">
+    <button class="insta-btn">Follow on Instagram</button>
+</a>
 </section>
 
 <footer>
@@ -201,6 +233,7 @@
 
 </body>
 </html>
+
 
 
 
